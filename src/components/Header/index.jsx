@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, Group } from './style'
+import AddStudent from '../AddStudent'
+import { Link } from 'react-router-dom'
 
 export default function Header({ title }) {
     return (
@@ -16,9 +18,11 @@ export default function Header({ title }) {
                         </Group.Btn>
                     </Group>
                 </Group>
-                <Container.Btn>
-                    <i className="bi bi-plus"></i> Add New Patient
-                </Container.Btn>
+                <Link to={'/addTeacher'}>
+                    <Container.Btn>
+                        <i className="bi bi-plus"></i> Add New Patient
+                    </Container.Btn>
+                </Link>
             </Container>
         </>
     )

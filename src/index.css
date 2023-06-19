@@ -160,3 +160,12 @@ table {
 .contant_box_404 {
   margin-top: -50px;
 }
+.button{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(37, 35, 59);
+}
+
+.button:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(37, 35, 59);
+}

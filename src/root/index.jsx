@@ -9,6 +9,8 @@ import Transcations from '../pages/Transcations'
 import { Route, Routes } from 'react-router-dom'
 import Teachers from '../pages/Teacher'
 import Error from '../components/Error'
+import AddStudent from '../components/AddStudent'
+import Edit from '../components/Edit'
 
 export default function Root() {
   return (
@@ -21,8 +23,10 @@ export default function Root() {
         <Route path='/patient' element={<Patient />} />
         <Route path='/transcations' element={<Transcations />} />
         <Route path='/teachers' element={<Teachers />} />
+        <Route path='/addTeacher' element={<AddStudent />} />
+        <Route path='/teachers/edit/:id' element={<Edit />} />
       </Route>
-      <Route path='*' element={<Error />}/>
+      <Route path='*' element={<Error />} />
     </Routes>
   )
 }

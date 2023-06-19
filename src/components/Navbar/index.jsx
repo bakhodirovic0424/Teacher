@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Group } from "./style";
-import image from '../Navbar/image.jpg'
+import image from '../../assets/img/test1.png'
 
 export default function Navbar() {
   return (

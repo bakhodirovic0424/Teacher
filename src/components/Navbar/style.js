@@ -62,7 +62,7 @@ Group.Icon = styled.div `
     box-shadow: 4px 4px 2px #f8f7fb;
     border-radius: 3px;
     position: relative;
-    color: ${props => props.red ? '#f59604' : '#21bc71'}
+    color: ${props => props.red ? '#f59604' : '#21bc71'};
     text-align: center;
     width: 50px;
     height: 50px;
@@ -85,10 +85,11 @@ Group.Number = styled.div `
     color: white;
 `
 
-Group.Img = styled.div `
+Group.Img = styled.img `
     width: 55px;
     height: 55px;
     overflow: hidden;
+    border-radius: 40px;
 `
 
 Group.GroupTitle = styled.div `

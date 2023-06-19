@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import axios from "axios";
 import Loader from "../../components/Loader";
+import { useNavigate } from "react-router-dom";
 const url = "https://6427fbdc46fd35eb7c492488.mockapi.io/teacher";
 
 export default function Teachers() {
   const [teachers, setTeacher] = useState([]);
   const [id, setId] = useState(null);
   const [load, setLoad] = useState(false)
-  console.log(teachers);
+  const navigate = useNavigate()
 
   useEffect(() => {
     setLoad(true)
@@ -21,7 +22,7 @@ export default function Teachers() {
       .then((res) => {
         setTeacher(res.data)
 
-        setTimeout(() =>{
+        setTimeout(() => {
           setLoad(false)
         }, 500)
 
@@ -29,7 +30,6 @@ export default function Teachers() {
   }, [id]);
 
   const removeTeacher = (id) => {
-    console.log(id);
     axios
       .delete(`https://6427fbdc46fd35eb7c492488.mockapi.io/teacher/${id}`, {
         headers: {
@@ -40,7 +40,10 @@ export default function Teachers() {
         if (res.status === 200) setId(id);
       });
   };
-  
+
+  const onEdit = (id) => {
+    navigate(`/teachers/edit/${id}`)
+  }
 
   return (
     <>
@@ -71,7 +74,7 @@ export default function Teachers() {
                       <td>{data.degree}</td>
                       <td className="d-flex align-items-center justify-content-center">
                         <div>
-                          <button className="btn btn-primary me-3">
+                          <button className="btn btn-primary me-3" onClick={() => onEdit(data.id)}>
                             <i className="bi bi-pencil-square"></i>
                           </button>
                           <button

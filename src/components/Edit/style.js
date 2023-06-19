@@ -10,21 +10,24 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 `
-Container.Title = styled.h3`
+Container.Title = styled.h4`
     text-align: center;
     font-size: 18px;
     color: rgb(37, 35, 59);
 `
+
 Container.Content = styled.div`
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
+
 Container.Input = styled.div`
     width: 300px;
     margin: 0 auto;
     border-radius: 6px;
+    margin-top: 15px;
 `
 
 Container.Button = styled.div`
